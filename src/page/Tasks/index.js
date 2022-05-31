@@ -230,6 +230,7 @@ function Tasks() {
         data={propsItem}
         updateOff={() => setIsUpdate(false)}
         updateOn={isUpdate}
+        tasks={selector}
       />
 
       {loading === true ? (

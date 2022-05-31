@@ -31,6 +31,8 @@ function UpdateTask(props) {
       id: data._id,
     };
     dispatch(updateTask(form));
+    var task = props.tasks.find(e => e._id == data._id);
+    task.status = values.status;
   };
 
   useEffect(() => {
