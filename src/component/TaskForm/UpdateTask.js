@@ -32,7 +32,11 @@ function UpdateTask(props) {
     };
     dispatch(updateTask(form));
     var task = props.tasks.find(e => e._id == data._id);
+    task.name = values.name;
+    task.desc = values.desc;
     task.status = values.status;
+    task.progress = values.progress;
+    task.issue = values.issue;
   };
 
   useEffect(() => {
